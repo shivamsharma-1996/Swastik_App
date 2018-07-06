@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="xsmall_12sp">12sp</dimen>
+    <dimen name="small_16sp">16sp</dimen>
+    <dimen name="medium_18sp">18sp</dimen>
+    <dimen name="large_20sp">20sp</dimen>
+    <dimen name="xlarge_25sp">25sp</dimen>
+    <dimen name="xxlarge_30sp">30sp</dimen>
+
+
+    <dimen name="splash_img_width_height">120dp</dimen>
+    <dimen name="splash_slide_title">30dp</dimen>
+    <dimen name="splash_desc_padding">40dp</dimen>
+    <dimen name="splash_slide_desc">16dp</dimen>
+    <dimen name="splash_dots_height">30dp</dimen>
+    <dimen name="splash_dots_margin_bottom">20dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="app_bar_height">200dp</dimen>
+    <dimen name="item_width">200dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+</resources>

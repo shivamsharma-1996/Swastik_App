@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    android:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    
+    <ScrollView 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content">
+       
+        <RelativeLayout
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content">
+            
+           <!-- <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:fillColor="@color/colorAccent"
+                android:pageColor="#00000000"
+                android:radius="4dp"
+                android:slideInterval="3000"
+                android:strokeColor="#ffffff"
+                android:strokeWidth="1dp" />-->
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:fillColor="#FFFFFFFF"
+                app:pageColor="#00000000"
+                app:radius="6dp"
+                app:slideInterval="3000"
+                app:strokeColor="#FF777777"
+                app:strokeWidth="1dp"/>
+
+
+           
+            <TextView
+                android:textSize="16dp" 
+                android:textColor="#ffffff"
+                android:id="@+id/textView" 
+                android:background="#1daf00"
+                android:padding="16dp" 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content" 
+                android:text="From 10 am to 11 pm"
+                android:layout_below="@+id/carouselView" />
+       
+            <RelativeLayout
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView">
+
+                <TextView 
+                    android:textSize="18dp" 
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="8dp"
+                    android:text="● Swastik Is A Place Where Innovation Never Stop. One stop Contractor Services Solutions for Interior or Exteriors.
+● Exclusive Distributer of Supreme Funjoy Schools Puzzles &amp; Decaura Self-adhesive Tiles Looking For Dealers School Stationary &amp; Interior Shop In Western Rajasthan. "
+                    android:lineSpacingExtra="7dp"  />
+
+                <TextView 
+                    android:textSize="18dp" 
+                    android:textStyle="bold"
+                    android:textColor="#ffffff" 
+                    android:id="@+id/textView7" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="16dp" 
+                    android:text="Our Services"
+                    android:layout_below="@+id/textView6" />
+
+                <View
+                    android:id="@+id/view"
+                    android:background="#205b14"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@+id/textView7" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/view">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:src="@mipmap/ic_launcher"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:layout_weight="33.0" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:src="@mipmap/ic_launcher"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="33.0" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:src="@mipmap/ic_launcher"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="33.0" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/linearLayout">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:src="@mipmap/ic_launcher"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="33.0" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:src="@mipmap/ic_launcher"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="33.0" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:src="@mipmap/ic_launcher"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="33.0" />
+                </LinearLayout>
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Terms and Conditions"
+                    android:layout_below="@+id/linearLayout1"
+                    android:visibility="gone"/>
+
+                <View
+                    android:id="@+id/view3"
+                    android:background="#205b14"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@+id/textView9"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/view3"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:textSize="16dp"
+                        android:textColor="#ffffff"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" 1) No Drinks/ No Smoking is allowed.
+ 2) No eatable goods from outside is allowed.
+ 3) Serving time minimum 25 minutes.
+ 4) Order once placed will not cancelled/changed.
+ 5) Parties are booked on advance payment.
+ 6) Home delivery minimum of Rs 200/-" android:lineSpacingExtra="8dp"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Contact Information"
+                    android:layout_below="@+id/linearLayout3" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:background="#205b14"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@+id/textView8" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@id/view1">
+
+
+                    <TextView
+                        android:textSize="16dp"
+                        android:textColor="#ffffff"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address : 276 A,Rameshwar Nagar Main Road,Opp Mohan Bansi complex Basni 1st Phase Jodhpur- 342005, Rajasthan, India"  />
+
+                    <TextView
+                        android:textSize="16dp"
+                        android:textColor="#ffffff"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email : swastiktrading94@gmail.com"  />
+
+                    <TextView
+                        android:textSize="16dp"
+                        android:textColor="#ffffff"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phone : 9928091259"  />
+
+                </LinearLayout>
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Developed By - "
+                    android:layout_below="@+id/linearLayout4"  />
+
+                <View
+                    android:id="@+id/view2"
+                    android:background="#205b14"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@+id/textView10" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/view2">
+
+                    <TextView
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="- Shivam Sharma"  />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

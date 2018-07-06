@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "224689918041",
+    "firebase_url": "https://swastikenterprises-11392.firebaseio.com",
+    "project_id": "swastikenterprises-11392",
+    "storage_bucket": "swastikenterprises-11392.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224689918041:android:a747aca93ead343b",
+        "android_client_info": {
+          "package_name": "com.swastikenterprises"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224689918041-9j3gkam2bhcdb9cn442ntn8g5mlf260d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.swastikenterprises",
+            "certificate_hash": "43f17a5fca687084ff74590a2a07cb7b9d0bbcc3"
+          }
+        },
+        {
+          "client_id": "224689918041-p3vh36hnvdm6mld2nbi38bnpclt509m4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnhJgwmg7g64tmkfWKZfqvIVtb3uuMqA0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224689918041-p3vh36hnvdm6mld2nbi38bnpclt509m4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
