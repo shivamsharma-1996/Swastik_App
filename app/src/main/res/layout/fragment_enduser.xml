@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="false"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Required Details for End_User"
+                android:textColor="#fff"
+                android:padding="13dp"
+                android:textSize="16sp"
+                android:background="@drawable/sheet_title_bg"/>
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="15dp"/>
+        </RelativeLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Looking for"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+
+                <TextView
+                    android:id="@+id/tv_lookingFor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sheet_textinputborder"
+                    android:text="select you are looking for"
+                    android:padding="5dp" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Work Type"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sheet_textinputborder"
+                    android:padding="5dp">
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog"
+                        android:prompt="@string/prompt" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Requirement"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sheet_textinputborder"
+                    android:padding="5dp">
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog"
+                        android:prompt="@string/prompt"/>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:typeface="serif"/>
+
+                <EditText
+                    android:id="@+id/e4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sheet_textinputborder"
+                    android:padding="5dp"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:typeface="serif"/>
+
+                <EditText
+                    android:id="@+id/e5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sheet_textinputborder"
+                    android:padding="5dp"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:typeface="serif"/>
+
+                <EditText
+                    android:id="@+id/e6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sheet_textinputborder"
+                    android:padding="5dp"
+                    android:inputType="number"
+                    android:imeOptions="actionNext"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:typeface="serif"/>
+
+                <EditText
+                    android:id="@+id/e7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sheet_textinputborder"
+                    android:padding="5dp"
+                    android:imeOptions="actionNext"/>
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Area"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:typeface="serif"/>
+
+                <EditText
+                    android:id="@+id/e8"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sheet_textinputborder"
+                    android:padding="5dp"
+                    android:imeOptions="actionNext"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Landmark"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:typeface="serif"/>
+
+                <EditText
+                    android:id="@+id/e9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sheet_textinputborder"
+                    android:padding="5dp"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:typeface="serif"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:padding="5dp"
+                    android:background="@drawable/sheet_textinputborder">
+                    <EditText
+                        android:id="@+id/e10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:singleLine="false"
+                        android:gravity="top"
+                        android:imeOptions="actionDone"/>
+                </RelativeLayout>
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Remark(*)"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:typeface="serif"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:padding="5dp"
+                    android:background="@drawable/sheet_textinputborder">
+                    <EditText
+                        android:id="@+id/e11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:singleLine="false"
+                        android:gravity="top"/>
+                </RelativeLayout>
+
+
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sheet_btn_bg"
+                    android:text="Submit"
+                    android:layout_gravity="right"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

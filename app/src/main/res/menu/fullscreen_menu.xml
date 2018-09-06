@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_nonfavorite"
         android:title="favourite"
         app:showAsAction="always"/>
-    <item android:id="@+id/menu_share" android:icon="@drawable/ic_share" android:title="share"
+    <item android:id="@+id/menu_share" android:icon="@drawable/ic_sharefullscreen" android:title="share"
         app:showAsAction="always"/>
 
 </menu>

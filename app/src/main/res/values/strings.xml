@@ -1,25 +1,19 @@
 <resources>
     <string name="app_name">SwastikEnterprises</string>
-    <string name="companyName">Swastik Enterprises</string>
     <string name="next">Next</string>
     <string name="skip">Skip</string>
-    <string name="start">GOT IT</string>
-    <string name="title_item_list">Items</string>
-    <string name="title_item_detail">Item Detail</string>
     <string name="navigation_drawer_open">open</string>
     <string name="navigation_drawer_close">close</string>
     <string name="title_home">Home</string>
     <string name="title_favourite">Favourite</string>
     <string name="title_gallery">Gallery</string>
-    <string name="title_about">About</string>
-    <string name="title_report_bug">Report a Bug</string>
-    <string name="title_help">Help</string>
-    <string name="title_share">Share</string>
+    <string name="title_share">Offers</string>
     <string name="title_rate_me">Rate Me</string>
     <string name="title_logout">Logout</string>
-    <string name="alert"><![CDATA[We need some details for our upcoming projects - ]]></string>
-    <string name="Name">Enter Full Name</string>
-    <string name="First_Name">First Name</string>
-    <string name="Second_Name">last_name</string>
     <string name="please_fill"><![CDATA[You have to  fill below details & click submit]]></string>
+    <string name="title_services">Join Us</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="prompt">Looking for</string>
+    <string name="notification_channel_id">defualt</string>
 </resources>

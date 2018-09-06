@@ -11,7 +11,7 @@ import com.swastikenterprises.R;
 
 public class SliderPagerAdapter extends PagerAdapter {
 
-    private int[] imgs = new int[]{R.drawable.slide1, R.drawable.slide2, R.drawable.slide3, R.drawable.slide4, R.drawable.slide5, R.drawable.slide6, R.drawable.slide7, R.drawable.slide8};
+    private int[] imgs = new int[]{R.drawable.slide8, R.drawable.slide4,R.drawable.slide9, R.drawable.slide5, R.drawable.slide6, R.drawable.slide7,  R.drawable.slide3};
     private Context ctx;
 
     public SliderPagerAdapter(Context context)
@@ -22,7 +22,7 @@ public class SliderPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup collection, int position)
     {
-        View view   = LayoutInflater.from(ctx).inflate(R.layout.slide_layout, collection, false);
+        View view   = LayoutInflater.from(ctx).inflate(R.layout.slide_layout1, collection, false);
         ImageView img = view.findViewById(R.id.img);
         img.setImageResource(imgs[position]);
         collection.addView(view);
@@ -38,7 +38,7 @@ public class SliderPagerAdapter extends PagerAdapter {
     @Override
     public int getCount()
     {
-        return 8;
+        return 7;
     }
 
     @Override

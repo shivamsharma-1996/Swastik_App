@@ -15,10 +15,54 @@
       },
       "oauth_client": [
         {
-          "client_id": "224689918041-9j3gkam2bhcdb9cn442ntn8g5mlf260d.apps.googleusercontent.com",
+          "client_id": "224689918041-lrqcs20hl1p3elf27fl21rq2eo5blbvj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.swastikenterprises",
+            "certificate_hash": "43f17a5fca687084ff74590a2a07cb7b9d0bbcc3"
+          }
+        },
+        {
+          "client_id": "224689918041-p3vh36hnvdm6mld2nbi38bnpclt509m4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnhJgwmg7g64tmkfWKZfqvIVtb3uuMqA0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224689918041-p3vh36hnvdm6mld2nbi38bnpclt509m4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224689918041:android:0925676b81af8ab2",
+        "android_client_info": {
+          "package_name": "jrs.com.swastik_offer_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224689918041-eln7dpfn60nq3k7b2bj3ahpm3l95i020.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jrs.com.swastik_offer_admin",
             "certificate_hash": "43f17a5fca687084ff74590a2a07cb7b9d0bbcc3"
           }
         },

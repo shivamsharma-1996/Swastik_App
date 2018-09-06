@@ -1,42 +1,36 @@
 package com.swastikenterprises.start;
 
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Build;
-import android.support.design.widget.FloatingActionButton;
+import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Html;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.swastikenterprises.R;
+import com.swastikenterprises.helper.PrefManager;
 import com.swastikenterprises.login.LoginActivity;
 
 public class WalkthroughActivity extends AppCompatActivity
 {
-  /*  private ViewPager mSlideViewPager;
-    private LinearLayout mDotLayout;*/
-
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
     private TextView[] dots;
     private int layouts;
-    private FloatingActionButton btnSkip, btnNext;
+    private Button btnSkip, btnNext;
     private PrefManager prefManager;
 
     private int[] images;
@@ -44,9 +38,10 @@ public class WalkthroughActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_walkthrough);
 
         prefManager = new PrefManager(this);
+        prefManager.setVideoLaunch(true);
         if (!prefManager.isFirstTimeLaunch())
         {
             launchHomeScreen();
@@ -58,6 +53,7 @@ public class WalkthroughActivity extends AppCompatActivity
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
 
+
         setContentView(R.layout.activity_walkthrough);
 
         viewPager =  findViewById(R.id.view_pager);
@@ -67,10 +63,11 @@ public class WalkthroughActivity extends AppCompatActivity
 
         images =new int[]
                 {
-                        R.drawable.img_first,
-                        R.drawable.img_second,
-                        R.drawable.img_third,
-                        R.mipmap.ic_launcher
+                        R.drawable.walk1,
+                        R.drawable.walk2,
+                        R.drawable.walk3,
+                        R.drawable.walk4,
+                        R.drawable.walk6
                 };
 
         layouts = R.layout.slide_layout;
@@ -84,11 +81,9 @@ public class WalkthroughActivity extends AppCompatActivity
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //launchHomeScreen();
+                launchHomeScreen();
 
-                Toast.makeText(WalkthroughActivity.this, "clcick", Toast.LENGTH_SHORT).show();
-                Intent facebookIntent = getOpenFacebookIntent(WalkthroughActivity.this);
-                startActivity(facebookIntent);
+
 
             }
         });
@@ -208,7 +203,7 @@ public class WalkthroughActivity extends AppCompatActivity
         {
             View view = getLayoutInflater().inflate(R.layout.slide_layout, container, false);
             img  = view.findViewById(R.id.img);
-            //img.setImageResource(images[position]);
+            img.setImageResource(images[position]);
             container.addView(view);
             return view;
         }
@@ -230,21 +225,6 @@ public class WalkthroughActivity extends AppCompatActivity
         {
             View view = (View) object;
             container.removeView(view);
-        }
-    }
-
-    public static Intent getOpenFacebookIntent(Context context)
-    {
-        try
-        {
-            context.getPackageManager().getPackageInfo("com.facebook.katana", 0); //Checks if FB is even installed.
-            return new Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/254175194653125")); //Trys to make intent with FB's URI
-        }
-        catch (Exception e)
-        {
-            Log.i("ece", String.valueOf(e));
-            return new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/IamSwastikenterprises/")); //catches and opens home_form url to the desired page
-           //https://www.facebook.com/profile.php?id=100004383791076
         }
     }
 }

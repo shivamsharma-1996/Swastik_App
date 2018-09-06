@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="end_user1" >
+        <item>Carpentry Work</item>
+        <item>Curtain Hanging Work</item>
+        <item>Painting &amp; Putty Work</item>
+        <item>False Ceiling Work</item>
+        <item>Aluminium Partition Work</item>
+        <item>Terrace waterproofing &amp; stone adhesives</item>
+        <item>Steel Railing &amp; Fabrication Work</item>
+        <item>Furniture  &amp; Installing Work</item>
+        <item>Toughned Glass &amp; Maintenance</item>
+        <item>Interior Designing Work(2D &amp; 3D)</item>
+        <item>Wooden Flooring Applicator</item>
+        <item>Wallpaper Applicator</item>
+        <item>Glassfilm Applicator</item>
+
+    </string-array>
+
+    <string-array name="end_user2" >
+        <item>Renovation</item>
+        <item>New Work Contract</item>
+        <item>Annual Maintenace</item>
+        <item>Halfyearly Maintenace</item>
+        <item>Installation</item>
+
+    </string-array>
+
+    <string-array name="end_user3" >
+        <item>Immediate</item>
+        <item>Within 15 Days</item>
+        <item>Within 1 Month</item>
+        <item>After 1 Month</item>
+    </string-array>
+
+    <string-array name="contractor1" >
+        <item>Steel Fabrications</item>
+        <item>Elevations Fabrications</item>
+        <item>Toughened Glass Fabrications</item>
+        <item>Furniture Work Contractor</item>
+        <item>Fall Ceilings Pop</item>
+        <item>Paint &amp; Putty Contractor</item>
+    </string-array>
+
+
+    <string-array name="suppliar1" >
+    <item>Distributor</item>
+    <item>Manufacturer</item>
+    <item>Dealer</item>
+    </string-array>
+
+
+    <string-array name="housewives1" >
+        <item>Bedsheets</item>
+        <item>Curtains</item>
+        <item>Home Utility</item>
+        <item>Home Decor</item>
+        <item>Any Other</item>
+
+    </string-array>
+
+    <string-array name="housewives2" >
+        <item>Min. 15,000/-</item>
+        <item>25,000/-</item>
+        <item>more than 50,000/-</item>
+    </string-array>
+
+    <string-array name="housewives3" >
+        <item>Rajasthan</item>
+    </string-array>
+
+    <string-array name="housewives4" >
+        <item>Jodhpur</item>
+        <item>Pali</item>
+        <item>Sojat</item>
+        <item>Sumerpur</item>
+        <item>Sirohi</item>
+        <item>Falna</item>
+        <item>Udaipur</item>
+        <item>Bhilwara</item>
+        <item>Ajmer</item>
+    </string-array>
+
+</resources>

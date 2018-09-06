@@ -32,8 +32,8 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="imageAsset" value="C:\Users\Shivam\Desktop\fb_logo.png" />
-                                      <entry key="outputName" value="fb_logo" />
+                                      <entry key="imageAsset" value="C:\Users\Shivam\Desktop\Swastik Designs pics realese\whatsapp business.png" />
+                                      <entry key="outputName" value="ic_wa_bu" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -69,7 +69,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/communication/ic_location_on_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/av/ic_skip_next_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -79,12 +79,10 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="13ff0a" />
-                            <entry key="height" value="48" />
-                            <entry key="outputName" value="ic_location" />
+                            <entry key="color" value="ff0300" />
+                            <entry key="outputName" value="ic_skip" />
                             <entry key="overrideSize" value="true" />
                             <entry key="sourceFile" value="C:\Users\Shivam" />
-                            <entry key="width" value="48" />
                           </map>
                         </option>
                       </PersistentState>

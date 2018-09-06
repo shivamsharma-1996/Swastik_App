@@ -9,8 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.swastikenterprises.R;
 
@@ -27,7 +29,6 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.holder>
         this.context = context;
         this.list = list;
         Log.i("listadaptre", String.valueOf(this.list));
-
     }
 
     @NonNull
@@ -44,9 +45,34 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.holder>
 
         Picasso.get()
                 .load(list.get(position))
-                .placeholder(R.mipmap.fb_logo)
-                .error(R.mipmap.ic_wa_logo)
-                .into(holder.image);
+                .into(holder.image, new Callback() {
+                    @Override
+                    public void onSuccess()
+                    {
+                        holder.mProgress.setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onError(Exception e)
+                    {
+                        Picasso.get()
+                                .load(list.get(position))
+                                .into(holder.image, new Callback() {
+                                    @Override
+                                    public void onSuccess()
+                                    {
+                                        holder.mProgress.setVisibility(View.GONE);
+                                    }
+
+                                    @Override
+                                    public void onError(Exception e) {
+
+                                    }
+                                });
+                    }
+                });
+
+        holder.image.setVisibility(View.VISIBLE);
 
 
         //holder. `Logo.setImageResource(list.get(position).getTitle());
@@ -79,11 +105,15 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.holder>
         private ImageView image;
         private TextView title;
         private TextView type;
+        private ProgressBar mProgress;
+
+
         public holder(View itemView)
         {
             super(itemView);
             view = itemView;
             image = view.findViewById(R.id.image);
+            mProgress = view.findViewById(R.id.progress);
            //title = view.findViewById(R.id.title);
 //            type = view.findViewById(R.id.type);
 

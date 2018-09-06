@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#e0e0e0"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.widget.CardView
@@ -35,52 +32,14 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:typeface="serif" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Architect Construction Products"
-                android:textSize="16sp"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingLeft="10dp"
-                android:layout_marginTop="15dp"/>
 
 
-
-
-
-
-
-                <TextView
-                    android:id="@+id/tv5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="● Elevations
-● Stone Murals &amp; Mosaic
-● Pergolas &amp; Gazebo
-● 304SS Gates
-●Toughened Glass Fabrications"
-
-                    android:textSize="@dimen/small_16sp"
-                    android:lineSpacingExtra="6dp"
-                    android:textColor="@android:color/black"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:singleLine="false"
-                    android:layout_marginTop="5dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#808080"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Customized Interior Decor"
+                android:text="Interior Decor Products"
                 android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold"
@@ -90,17 +49,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="false"
-                android:text="● Customized Wallpapers
-● Canvas Wall Paintings
-● Pergolas &amp; Gazebo
-● Artificial Plants &amp; Grass
-● Customized Decals
-● Wooden Flooring
-● Glass Films
-● Frp &amp; Handicraft Sculptures
-● Spikes , Bird Net
+                android:text="● Customized Wallpapers\n● Nilaya(Asian Paints) Wallpapers\n● Canvas Paintings\n● Artificial Grass &amp; Plants\n● Customized WallStickers\n● Wooden Vinyl Flooring\n● Glass Films(Customized &amp;  Decorative)\n● Frp Sculptures &amp; Handicraft Decor\n● Spikes Services \n● Bird Net Services
 "
+                android:maxLines="10"
                 android:textSize="@dimen/small_16sp"
                 android:lineSpacingExtra="6dp"
                 android:textColor="@android:color/black"
@@ -108,6 +59,45 @@
                 android:paddingRight="15dp"
                 android:layout_marginTop="5dp"
                 />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#808080"
+                android:layout_marginTop="10dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Architect Construction Products"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"/>
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="● Elevations (HPL, ACP)\n● Stone Murals Mosaic (2D,3D)\n● Pergola &amp; Gazebo(Wooden, WPC)\n● 304SS Gates Railings\n● Toughened Glass Fabrications\n● Ferro Cement Applications"
+                    android:maxLines="6"
+                    android:textSize="@dimen/small_16sp"
+                    android:lineSpacingExtra="6dp"
+                    android:textColor="@android:color/black"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="5dp"/>
+
+
+
+
 
 
         </LinearLayout>
