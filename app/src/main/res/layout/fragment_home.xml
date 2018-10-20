@@ -49,10 +49,9 @@
                     android:drawableLeft="@drawable/ic_time"
                     android:drawablePadding="3dp"
                     android:padding="16dp"
-                    android:text="Time Avaialability - 2 pm to 8:30 pm"
+                    android:text=" Site Visit - 9 AM to 2:30 PM\n Office Availabilty - 4 PM to 8:30 PM "
                     android:textColor="#ffffff"
                     android:textSize="16dp" />
-
 
 <FrameLayout
     android:layout_width="match_parent"

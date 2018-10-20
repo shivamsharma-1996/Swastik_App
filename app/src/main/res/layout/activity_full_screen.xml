@@ -1,28 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#000">
-
-
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_gravity="center"
-       >
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/img"
+        <com.swastikenterprises.custom.CustomViewPager
+            android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/slide4"/>
+            android:layout_centerInParent="true" />
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/imagelist_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            app:fillColor="@android:color/white"
+            app:pageColor="@android:color/transparent"
+            app:radius="4dp"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="0.5dp" />
     </RelativeLayout>
-
-
 
     <FrameLayout
     android:layout_width="match_parent"
@@ -43,10 +50,7 @@
 
 </FrameLayout>
 
-    <ProgressBar
-        android:id="@+id/progress"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:indeterminate="false"/>
+
+
+
 </FrameLayout>

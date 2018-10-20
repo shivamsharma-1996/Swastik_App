@@ -74,7 +74,7 @@ public class Home extends Fragment
     TextView bt_cancel, bt_submit;
     Button btDone;
 
-    private Uri pdfFileUri;
+    private Uri pdfFileUri = null;
 
     private String email = "", profile = "";
 
@@ -85,8 +85,6 @@ public class Home extends Fragment
     {
 
     }
-
-
 
 
 
@@ -231,9 +229,7 @@ public class Home extends Fragment
             @Override
             public void onClick(View v)
             {
-                ll_upload.setEnabled(false);
-                etEmail.setEnabled(false);
-                etProfile.setEnabled(false);
+
                 choosePDF();
             }
         });
@@ -256,13 +252,14 @@ public class Home extends Fragment
                     Toast.makeText(getContext(), "Current Profile Name Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                else if(tv_upload.equals("Opportunity to Work with us!"))
+                else if(pdfFileUri == null)
                {
                    Toast.makeText(getContext(), "Please Upload your Resume", Toast.LENGTH_SHORT).show();
                    return;
                }
 
                 progress.setVisibility(View.VISIBLE);
+                uploadFile(pdfFileUri);
 
             }
         });
@@ -305,7 +302,6 @@ public class Home extends Fragment
             //if a file is selected
             if (data.getData() != null)
             {
-
                 pdfFileUri = data.getData();
                 String uriString = data.getData().toString();
                 File myFile = new File(uriString);
@@ -332,7 +328,7 @@ public class Home extends Fragment
 
                 tv_upload.setText(displayName);
 
-                uploadFile(pdfFileUri);
+
             }
 
             }

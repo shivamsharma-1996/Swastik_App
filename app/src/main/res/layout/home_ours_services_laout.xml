@@ -49,7 +49,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="● Customized Wallpapers\n● Nilaya(Asian Paints) Wallpapers\n● Canvas Paintings\n● Artificial Grass &amp; Plants\n● Customized WallStickers\n● Wooden Vinyl Flooring\n● Glass Films(Customized &amp;  Decorative)\n● Frp Sculptures &amp; Handicraft Decor\n● Spikes Services \n● Bird Net Services
+                android:text="● Customized Wallpapers\n● Nilaya(Asian Paints) Wallpapers\n● Canvas Paintings\n● Artificial Grass &amp; Plants\n● Customized WallStickers\n● Wooden Vinyl Flooring\n● Glass Films(Customized &amp;  Decorative)\n● Frp Sculptures &amp; Handicraft Decor\n● Spikes Services \n● Bird Net Services \n●Modular Kitchen
 "
                 android:maxLines="10"
                 android:textSize="@dimen/small_16sp"
@@ -86,7 +86,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="● Elevations (HPL, ACP)\n● Stone Murals Mosaic (2D,3D)\n● Pergola &amp; Gazebo(Wooden, WPC)\n● 304SS Gates Railings\n● Toughened Glass Fabrications\n● Ferro Cement Applications"
+                    android:text="● Elevations (HPL, ACP)\n● Stone Murals Mosaic (2D,3D)\n● Pergola &amp; Gazebo(Wooden, WPC)\n● 304SS Gates Railings\n● Toughened Glass Fabrications\n● Cunstruction Chemicals &amp; Tiles Adhesive\n●Ferro Cement Applications"
                     android:maxLines="6"
                     android:textSize="@dimen/small_16sp"
                     android:lineSpacingExtra="6dp"

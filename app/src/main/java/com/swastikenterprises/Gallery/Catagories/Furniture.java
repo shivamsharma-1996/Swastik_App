@@ -14,12 +14,12 @@ import com.swastikenterprises.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Interior extends Fragment
+public class Furniture extends Fragment
 {
     private View interior_view;
     private RecyclerView rec;
 
-    public Interior()
+    public Furniture()
     {
         //Required empty public constructor
     }
@@ -48,23 +48,12 @@ public class Interior extends Fragment
     public List<String> getTitleList()
     {
         List titleList = new ArrayList();
-        titleList.add("Customized Wallpapers");
-        titleList.add("Wallpapers Asian Paints(nilaya) \n No. of Brands");
-        titleList.add("Customized WardrobSkin");
-        titleList.add("Customized Glassfilm");
-        titleList.add("Canvas Paintings");
-        titleList.add("Customized Wall Stickers");
-        titleList.add("Customized Curtains & Blinds");
-        titleList.add("Customized Posters");
-        titleList.add("Supreme Self Adhesive 3D Form");
-        titleList.add("Glassfilm Decorative");
-        titleList.add("Decorative Furniture");
-        titleList.add("Wooden Flooring");
-        titleList.add("Interlock Flooring \n (Gym & Sports)");
-        titleList.add("Vinyl Flooring");
-        titleList.add("Carpet Flooring");
-        titleList.add("Pinewood Panels");
-        titleList.add("Stretch Fabric Ceilings");
+        titleList.add("Home furniture \n Indoor-Outdoor both");
+        titleList.add("Office furniture");
+        titleList.add("School & College Furniture");
+        titleList.add("Hotel & Restaurant Furniture");
+        titleList.add("Bank or Corporate Furniture");
+        titleList.add("Healthcare Furniture");
         return titleList;
     }
 }

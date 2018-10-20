@@ -62,6 +62,9 @@ public class TabPagerAdapter extends FragmentPagerAdapter
             case 2:
                 Home home = new Home();
                 return home;
+            case 3:
+                Furniture furniture = new Furniture();
+                return furniture;
             default:
                 return null;
 
@@ -70,7 +73,7 @@ public class TabPagerAdapter extends FragmentPagerAdapter
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
 
@@ -85,9 +88,10 @@ public class TabPagerAdapter extends FragmentPagerAdapter
                 return "Exterior\nExclusive";
             case 2:
                 return "Home\nUtility";
+            case 3:
+                return "Furniture";
             default:
                 return null;
-
         }
     }
 }

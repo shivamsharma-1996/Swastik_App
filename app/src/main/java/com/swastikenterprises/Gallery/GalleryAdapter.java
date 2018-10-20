@@ -86,8 +86,8 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.holder>
                 //Toast.makeText(view.getContext(), getAdapterPosition()+1, Toast.LENGTH_SHORT).show();
                 Intent fullScreenIntent = new Intent( holder.image.getContext(), FullScreenActivity.class);
                 Log.i("bp", String.valueOf(list.get(position)));
-                fullScreenIntent.putExtra("clicked_image",list.get(position));
-                holder.image.getContext().startActivity(fullScreenIntent);
+                /*fullScreenIntent.putExtra("clicked_image",list.get(position));
+                holder.image.getContext().startActivity(fullScreenIntent);*/
             }
         });
     }

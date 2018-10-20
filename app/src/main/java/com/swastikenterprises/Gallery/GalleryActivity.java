@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -135,9 +136,6 @@ public class GalleryActivity extends AppCompatActivity
 
         mToolbar = findViewById(R.id.main_toolbar);
         setSupportActionBar(mToolbar);
-        //getSupportActionBar().setTitle(catagory);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        // getSupportActionBar().setIcon(R.drawable.ic_close);
 
         init();
 
@@ -188,7 +186,6 @@ public class GalleryActivity extends AppCompatActivity
         rec_gallery = findViewById(R.id.rec_gallery);
         rec_gallery.setLayoutManager(new GridLayoutManager(this, 2));
         rec_gallery.setHasFixedSize(true);
-
         mRootRef.child("Custom_Wallpaper").keepSynced(true);
     }
 
@@ -225,10 +222,9 @@ public class GalleryActivity extends AppCompatActivity
             return new GalleryHolder(view);
         }
         @Override
-        protected void onBindViewHolder(@NonNull final GalleryHolder galleryHolder, int position, @NonNull final GalleryGridModel galleryGridModel)
+        protected void onBindViewHolder(@NonNull final GalleryHolder galleryHolder, final int position, @NonNull final GalleryGridModel galleryGridModel)
         {
             galleryHolder.setImage(galleryGridModel.getImg());
-
 
             galleryHolder.galleryView.setOnClickListener(new View.OnClickListener()
             {
@@ -237,9 +233,10 @@ public class GalleryActivity extends AppCompatActivity
                 {
                     Intent fullScreenIntent = new Intent(GalleryActivity.this, FullScreenActivity.class);
                     fullScreenIntent.putExtra("catagory",catagory);
+                    fullScreenIntent.putExtra("pos",position);
                     fullScreenIntent.putExtra("clicked_image",galleryGridModel.getImg());
                     startActivity(fullScreenIntent);
-                    finish();
+                    //finish();
                 }
             });
         }

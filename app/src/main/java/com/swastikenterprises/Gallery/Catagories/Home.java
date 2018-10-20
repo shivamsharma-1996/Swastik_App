@@ -24,9 +24,10 @@ public class Home extends Fragment
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         home_view = inflater.inflate(R.layout.gallery_fragment_home, container, false);
         initData();
-        return  home_view;
+        return home_view;
     }
 
     private void initData() {
@@ -45,6 +46,7 @@ public class Home extends Fragment
     public List<String> getTitleList() {
         List titleList = new ArrayList();
         titleList.add("Yoga matts & Yoga Brick");
+        titleList.add("Tea light candles & Aroma diffusers");
         titleList.add("Bedsheets");
         titleList.add("Exterior Curtains & Blinds");
         titleList.add("Bird Feeder");
@@ -52,13 +54,13 @@ public class Home extends Fragment
         titleList.add("Bird Net");
         titleList.add("Bird Spikes");
         titleList.add("Bird Cage");
+        titleList.add("Natural Grass & Plants");
         titleList.add("Artificial Grass & Plants");
         titleList.add("Door Matts");
         titleList.add("Automatic Air Dispensers");
         titleList.add("Shade Sail & Green Shade Net");
-        titleList.add("Acrylic Shelf & Mobile Stands");
+        titleList.add("Home-Hardware Accessories");
         titleList.add("Terracotta Items");
         return titleList;
     }
-
 }

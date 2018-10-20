@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.github.chrisbanes.photoview.PhotoViewAttacher;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -34,31 +35,40 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.swastikenterprises.R;
+import com.swastikenterprises.custom.CustomViewPager;
+import com.viewpagerindicator.CirclePageIndicator;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
-public class FullScreenActivity extends AppCompatActivity {
-
+public class FullScreenActivity extends AppCompatActivity
+{
     private static final String TAG = FullScreenActivity.class.getSimpleName();
     private String selectedImg;
     PhotoViewAttacher mPhotoViewAttacher;
-    private ImageView img;
+   // private ImageView img;
     private ProgressBar mProgressDialog;
-
+    CirclePageIndicator mIndicator;
+    CustomViewPager mViewPager;
+    FullScreenPagerAdapter mAdapter;
+    private List<String> imgList = new ArrayList<>();
 
     //Toolbar
     private Toolbar fullScreen_toolbar;
     ActionBar actionBar;
-    private DatabaseReference mRootRef;
+    private DatabaseReference mRootRef,mFavouriteRoof;
 
     private boolean isFavourite = false;
     Menu mMenu;
 
     private String catagory;
+    private int positionSelectedImg;
+    private FirebaseRecyclerAdapter<GalleryGridModel, GalleryHolder> firebaseRecyclerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -68,20 +78,10 @@ public class FullScreenActivity extends AppCompatActivity {
          requestWindowFeature(1);
          getWindow().setFlags(1024, 1024);                                  //also for full scree mode
 
-
-        Bundle bundle = getIntent().getExtras();
-
-        if(bundle!= null)
-        {
-            catagory = bundle.getString("catagory");
-        }
-
         setContentView( R.layout.activity_full_screen);
 
-        img = findViewById(R.id.img);
-        mPhotoViewAttacher = new PhotoViewAttacher(img);
-        mProgressDialog = findViewById(R.id.progress);
-
+        //img = findViewById(R.id.img);
+//        mPhotoViewAttacher = new PhotoViewAttacher(img);
 
         fullScreen_toolbar = findViewById(R.id.fullScreen_toolbar);
         setSupportActionBar(fullScreen_toolbar);
@@ -91,43 +91,103 @@ public class FullScreenActivity extends AppCompatActivity {
         actionBar.setHomeAsUpIndicator(R.drawable.ic_back);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+        mViewPager = findViewById(R.id.viewpager);
+        mIndicator = findViewById(R.id.imagelist_indicator);
+
+        Bundle bundle = getIntent().getExtras();
 
         if (bundle!=null)
         {
+            catagory = bundle.getString("catagory");
             selectedImg = bundle.getString("clicked_image");
-            Log.i(TAG, String.valueOf(selectedImg));
-            Picasso.get().load(selectedImg).into(img, new Callback() {
+            positionSelectedImg =  bundle.getInt("pos");
+            Log.i(TAG, String.valueOf(positionSelectedImg));
+
+           /* Picasso.get().load(selectedImg).into(img, new Callback() {
                 @Override
                 public void onSuccess()
                 {
                     mProgressDialog.setVisibility(View.GONE);
                     mPhotoViewAttacher.update();
                 }
-
                 @Override
                 public void onError(Exception e)
-                {
-
-                }
-            });
+                {}
+            });*/
+        }
+        if(mAdapter == null) {
+            mAdapter = new FullScreenPagerAdapter(this, imgList);
+            mViewPager.setAdapter(mAdapter);
+            mIndicator.setViewPager(mViewPager);
         }
 
-
-
+        if(catagory.equals("Wallpapers Asian Paints(nilaya) \n No. of Brands"))
+        {
+            catagory = "Wallpapers Asian Paints";
+        }
+        else if(catagory.equals("Customized Wallpapers"))
+        {
+            catagory = "Customized Wallpaers";
+        }
+        else if(catagory.equals("Stone Mosaic, Murals & Pebbles"))
+        {
+            catagory = "Stone Mosaic & Murals";
+        }
+        else if(catagory.equals("Exterior Curtains & Blinds"))
+        {
+            catagory = "Exterior Curtians & Blinds";
+        }
+        else if(catagory.equals("Interlock Flooring \n (Gym & Sports)"))
+        {
+            catagory = "Interlock Flooring";
+        }
+        else if(catagory.equals("Shade Sail & Green Shade Net"))
+        {
+            catagory = "Shades Sail";
+        }
+        else
+        {
+            mRootRef = FirebaseDatabase.getInstance().getReference().child(catagory);
+        }
+        mRootRef.keepSynced(true);
         init();
 
+        mRootRef.child(catagory).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot data: dataSnapshot.getChildren())
+                {
+                    GalleryGridModel model = data.getValue(GalleryGridModel.class);
+                    imgList.add(model.getImg());
+                }
+                mAdapter.setImgList(imgList);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
+        mViewPager.setCurrentItem(positionSelectedImg);
     }
 
     private void init()
     {
-        mRootRef = FirebaseDatabase.getInstance().getReference().child("Favourites").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        mRootRef = FirebaseDatabase.getInstance().getReference();
+        mFavouriteRoof = mRootRef.child("Favourites").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
         mMenu = menu;
-        Query q = mRootRef.orderByChild("url").equalTo(selectedImg);
+        Query q = mFavouriteRoof.orderByChild("url").equalTo(selectedImg);
         q.addListenerForSingleValueEvent(new ValueEventListener()
         {
             @Override
@@ -191,7 +251,7 @@ public class FullScreenActivity extends AppCompatActivity {
 
     private void createUnFavourite()
     {
-        Query q = mRootRef.orderByChild("url").equalTo(selectedImg);
+        Query q = mFavouriteRoof.orderByChild("url").equalTo(selectedImg);
         q.addListenerForSingleValueEvent(new ValueEventListener()
         {
             @Override
@@ -225,7 +285,7 @@ public class FullScreenActivity extends AppCompatActivity {
     {
         Map m = new HashMap<>();
         m.put("url", selectedImg);
-        mRootRef.push().setValue(m).addOnCompleteListener(new OnCompleteListener<Void>() {
+        mFavouriteRoof.push().setValue(m).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful())
@@ -242,16 +302,15 @@ public class FullScreenActivity extends AppCompatActivity {
     {
         //super.onBackPressed();
         super.onBackPressed();
-        Intent i = new Intent(this, GalleryActivity.class);
+        /*Intent i = new Intent(this, GalleryActivity.class);
         i.putExtra("catagory", catagory);
-        startActivity(i);
+        startActivity(i);*/
         finish();
-
     }
 
     private void shareContent()
     {
-        Bitmap bitmap =getBitmapFromView(img);
+       /* Bitmap bitmap =getBitmapFromView(img);
         try {
             File file = new File(this.getExternalCacheDir(),"logicchip.png");
             FileOutputStream fOut = new FileOutputStream(file);
@@ -267,8 +326,7 @@ public class FullScreenActivity extends AppCompatActivity {
             startActivity(Intent.createChooser(intent, "Share image via"));
         } catch (Exception e) {
             e.printStackTrace();
-        }
-
+        }*/
     }
 
     private Bitmap getBitmapFromView(View view) {
